@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+  <div class="form-group">
+
+    <table class="check-your-answers">
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h1 class="heading-medium">
+              Check your details before continuing
+            </h1>
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            Service applying for
+          </td>
+          <td>
+            {{ data['service'] }}
+          </td>
+          <td class="change-answer">
+            <a href="choice">
+              Change
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Full name
+          </td>
+          <td>
+            {{ data['givennames'] }} {{ data['surname'] }}
+          </td>
+          <td class="change-answer">
+            <a href="passport-name">
+              Change
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Other names
+          </td>
+          <td>
+            {{ data['otherfirstname'] }} {{ data['otherlastname'] }} {{ data['othernames'] }}
+          </td>
+          <td class="change-answer">
+            <a href="passport-othername">
+              Change
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Date of birth
+          </td>
+          <td>
+            {{ data['dobday'] }}/{{ data['dobmonth'] }}/{{ data['dobyear'] }}
+          </td>
+          <td class="change-answer">
+            <a href="date-of-birth">
+              Change <span class="visuallyhidden">your Registered Traveller number</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Gender
+          </td>
+          <td>
+            {{ data['gender'] }}
+          </td>
+          <td class="change-answer">
+            <a href="gender">
+              Change <span class="visuallyhidden">your Registered Traveller number</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Nationality
+          </td>
+          <td>
+            {{ data['british-citizen'] }}
+          </td>
+          <td class="change-answer">
+            <a href="passport-nationality">
+              Change <span class="visuallyhidden">your passport nationality</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Passport number
+          </td>
+          <td>
+            {{ data['passportnumber'] }}
+          </td>
+          <td class="change-answer">
+            <a href="passport-number">
+              Change
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Passport expiry date
+          </td>
+          <td>
+             {{ data['expday'] }}/{{ data['expmonth'] }}/{{ data['expyear'] }}
+          </td>
+          <td class="change-answer">
+            <a href="passport-expiry">
+              Change
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Criminal record
+          </td>
+          <td>
+            No
+          </td>
+          <td class="change-answer">
+            <a href="convictions">
+              Change
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            UK customs penalties
+          </td>
+          <td>
+            No
+          </td>
+          <td class="change-answer">
+            <a href="penalties">
+              Change
+            </a>
+          </td>
+        </tr>
+
+
+      </tbody>
+    </table>
+  </div>
+  <div class="form-group">
+    <a class="button" href="declaration.html" id="continuebutton">Confirm details</a>
+  </div>
+</main>
+
+{% endblock %}

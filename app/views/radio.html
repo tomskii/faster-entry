@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Do you like cheese?
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="checkbox" method="get" class="form">
+
+        <h1 class="heading-large">
+          Do you like cheese?
+        </h1>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="visually-hidden">Do you like cheese?</legend>
+            <div class="multiple-choice">
+              <input id="cheese-yes" type="radio" name="like-cheese" value="Yes" {{ checked('like-cheese','Yes') }}>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="cheese-no" type="radio" name="like-cheese" value="No" {{ checked('like-cheese','No') }}>
+              <label for="cheese-no">No</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    Check your answers
+  </h1>
+
+  <table class="check-your-answers">
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>{{ data['name'] }}</td>
+        <td class="change-answer">
+          <a href="input">
+            Change <span class="visuallyhidden">name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Likes cheese?</td>
+        <td>{{ data['like-cheese'] }}</td>
+        <td class="change-answer">
+          <a href="radio">
+            Change <span class="visuallyhidden">cheese preference</span>
+          </a>
+        </td>
+      </tr>
+      {% if data['like-cheese'] == 'Yes' %}
+        <tr>
+          <td>Which cheeses?</td>
+          <td>
+            <ul class="list list-bullet">
+              {% for cheese in data['which-cheeses'] %}
+                <li>{{ cheese }}</li>
+              {% else %}
+                No cheeses selected
+              {% endfor %}
+            </ul>
+          </td>
+          <td class="change-answer">
+            <a href="checkbox">
+              Change <span class="visuallyhidden">cheese selection</span>
+            </a>
+          </td>
+        </tr>
+      {% endif %}
+    </tbody>
+  </table>
+
+</main>
+
+{% endblock %}
