@@ -17,7 +17,7 @@
     <h1 class="heading-large">You might be able to apply for {{ data['service'] }}</h2>
       <p>You might still be able to apply for Global Entry if you have a minor conviction that is more than 10 years old.</p>
 
-      <p class="panel panel-border-wide">However, the US authorities will consider all criminal offences, including spent ones, when making a Global Entry application decision. This means if you have an older or spent conviction you still may not pass the UK background checks and won’t get a refund of the £42 fee.</p>
+      <p class="panel panel-border-wide">However, the US authorities will consider all criminal offences, including spent ones, when making a {{ data['service'] }} application decision. This means if you have an older or spent conviction you still may not pass the UK background checks and won’t get a refund of the £42 fee.</p>
 
       <p>Contact <a href="https://help.cbp.gov/app/answers/detail/a_id/1208/" target="_blank" rel="external">US Customs and Border Protection</a><span class="visuallyhidden">Opens in new window</span> for further questions about how past convictions may affect your application.</p>
 
@@ -25,7 +25,7 @@
 
         <div class="multiple-choice">
           <input id="convictionsWarning" name="convictionsWarning" type="checkbox" value="British">
-          <label for="convictionsWarning">I understand the above and still want to register to apply Global Entry</label>
+          <label for="convictionsWarning">I understand the above and still want to register to apply {{ data['service'] }}</label>
         </div>
       </div>
 
