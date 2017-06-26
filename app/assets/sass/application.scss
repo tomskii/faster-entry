@@ -67,3 +67,115 @@ a[rel="external"]:after {
     background-repeat: no-repeat;
 }
 #global-header .header-proposition a.menu {display: none}
+.form.payment .form-date p {margin-bottom: 10px}
+.form.payment p.paymentp {margin-bottom: 3px}
+.form-control.percent100 {width: 100%}
+.form-control.percent75 {width: 75%}
+.gaptop {margin-top: 10px}
+.form.payment .form-control {border-color: #B7B9BB}
+
+
+.payment-summary {
+  clear: both;
+  margin: 30px 0;
+}
+
+.payment-summary .inner {
+  background-color: #f8f8f8;
+  border: 10px solid #bfc1c3;
+  padding: 15px;
+}
+
+@media (min-width: 641px) {
+  .payment-summary .inner {
+    width: 200px;
+  }
+}
+
+@media (min-width: 769px) {
+  .payment-summary .inner {
+    width: 250px;
+  }
+}
+
+.payment-summary .inner h2 {
+  padding-bottom: 0;
+}
+
+.payment-summary .inner p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.3157894737;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@media (max-width: 640px) {
+  .payment-summary .inner p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.payment-summary .inner p .amount {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 1.1111111111;
+  font-weight: 700;
+  text-transform: none;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .payment-summary .inner p .amount {
+    font-size: 24px;
+    line-height: 1.0416666667;
+  }
+}
+
+.payment-summary .inner p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (min-width: 641px) {
+  .payment-summary {
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 250px;
+  }
+}
+
+@media (min-width: 769px) {
+  .payment-summary {
+    width: 300px;
+  }
+}
+
+@media (min-width: false) {
+  .content-fixed {
+    position: fixed;
+    top: 30px;
+  }
+}
+
+.panel {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  border-left-style: solid;
+  border-color: #bfc1c3;
+  padding: 0.7894736842em;
+  margin-bottom: 0.7894736842em;
+}
+
+.panel :first-child {
+  margin-top: 0;
+}
+
+.panel :only-child,
+.panel :last-child {
+  margin-bottom: 0;
+}
