@@ -20,4 +20,7 @@ $(document).ready(function () {
   // to toggle hidden content
   var showHideContent = new GOVUK.ShowHideContent()
   showHideContent.init()
+
+  GOVUK.stickAtTopWhenScrolling.init()
+
 })
