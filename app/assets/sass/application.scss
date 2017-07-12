@@ -67,17 +67,139 @@ a[rel="external"]:after {
     background-repeat: no-repeat;
 }
 #global-header .header-proposition a.menu {display: none}
+
+@media (min-width: 641px) {
 .form.payment .form-date p {margin-bottom: 10px}
+}
+.form.payment .form-date p {margin-bottom: 7px}
+
 .form.payment p.paymentp {margin-bottom: 3px}
+
+@media (min-width: 641px){
 .form-control.percent100 {width: 100%}
 .form-control.percent75 {width: 75%}
+.form-control.percent25 {width: 25%}
+.form-control.percent15 {width: 15%}
+}
+
 .gaptop {margin-top: 10px}
 .form.payment .form-control {border-color: #B7B9BB}
+
+.form-group .generic-cvc {
+    float: left;
+    max-height: 38px;
+    position: relative;
+    top: -1px;
+    margin-right: 15px;
+    float: left;
+}
+
+.form-group .cvc {
+    float: left;
+    margin-right: 15px;
+}
+
+.form-control.cvc {width: 15%}
+
+@media (max-width: 640px){
+.form-control.cvc {width: 40%}
+}
+
+form.payment .form-date .form-group-seperator {width: 20px;}
+form.payment .form-group.form-group-seperator  {margin-right: 0;}
+form.payment .form-group-seperator p {margin: 30px 0 0 0; font-size: 27px; color: #6f777b;}
+@media (max-width: 640px){
+form.payment .form-group-seperator p {margin: 25px 0 0 0}
+}
+
+form.payment .form-group.form-group-year  {margin-right: 10px;}
+p.withdrawal-text {margin-bottom:0}
+
+.accepted-cards {
+  margin: 15px 0 10px;
+  padding: 0;
+  display: block;
+  float: none;
+  overflow: hidden;
+}
+
+.accepted-cards li {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 34px;
+  background-size: 100%;
+  margin-right: 5px;
+}
+
+.accepted-cards li.american-express {
+  background-image: url("/public/images/payment/american-express-bw.png");
+}
+
+.accepted-cards.field-empty li.american-express,
+.accepted-cards li.american-express.selected {
+  background-image: url("/public/images/payment/american-express-color.png");
+}
+
+.accepted-cards li.diners-club {
+  background-image: url("/public/images/payment/diners-club-bw.png");
+}
+
+.accepted-cards.field-empty li.diners-club,
+.accepted-cards li.diners-club.selected {
+  background-image: url("/public/images/payment/diners-club-color.png");
+}
+
+.accepted-cards li.discover {
+  background-image: url("/public/images/payment/discover-bw.png");
+}
+
+.accepted-cards.field-empty li.discover,
+.accepted-cards li.discover.selected {
+  background-image: url("/public/images/payment/discover-color.png");
+}
+
+.accepted-cards li.jcb {
+  background-image: url("/public/images/payment/jcb-bw.png");
+}
+
+.accepted-cards.field-empty li.jcb,
+.accepted-cards li.jcb.selected {
+  background-image: url("/public/images/payment/jcb-color.png");
+}
+
+.accepted-cards li.master-card {
+  background-image: url("/public/images/payment/master-card-bw.png");
+}
+
+.accepted-cards.field-empty li.master-card,
+.accepted-cards li.master-card.selected {
+  background-image: url("/public/images/payment/master-card-color.png");
+}
+
+.accepted-cards li.visa {
+  background-image: url("/public/images/payment/visa-bw.png");
+}
+
+.accepted-cards.field-empty li.visa,
+.accepted-cards li.visa.selected {
+  background-image: url("/public/images/payment/visa-color.png");
+}
+
+.accepted-cards li.unionpay {
+  background-image: url("/public/images/payment/unionpay-bw.png");
+}
+
+.accepted-cards.field-empty li.unionpay,
+.accepted-cards li.unionpay.selected {
+  background-image: url("/public/images/payment/unionpay-color.png");
+}
+
 
 
 .payment-summary {
   clear: both;
-  margin: 30px 0;
+  margin: 30px 15px;
 }
 
 .payment-summary .inner {
@@ -100,6 +222,9 @@ a[rel="external"]:after {
 
 .payment-summary .inner h2 {
   padding-bottom: 0;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .payment-summary .inner p {
@@ -179,3 +304,8 @@ a[rel="external"]:after {
 .panel :last-child {
   margin-bottom: 0;
 }
+.content-wrapper {position: relative;}
+
+p span#payment-description {font-weight: 700}
+
+h2.payment-sub {margin: 30px 0 10px}

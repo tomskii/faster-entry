@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for faster entry to the USA and Canada
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" class="content-wrapper">
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1 class="heading-large">Confirm your payment</h1>
+
+    <div class="form-group">
+    <table class="confirm-details">
+        <tr>
+            <td>Card number:</td>
+            <td id="card-number" class="details">{{ data['cardnumber'] }}</td>
+        </tr>
+        <tr>
+            <td>Card brand:</td>
+            <td id="card-brand" class="details">{{ data['brand'] }}</td>
+        </tr>
+        <tr>
+            <td>Expiry date:</td>
+            <td id="expiry-date" class="details">{{ data['paymonth'] }}/{{ data['payyear'] }}</td>
+        </tr>
+        <tr>
+            <td>Name on card:</td>
+            <td id="cardholder-name" class="details">{{ data['cardname'] }}</td>
+        </tr>
+        <tr>
+            <td>Billing address:</td>
+            <td id="address" class="details">{{ data['building'] }}, {{ data['building2'] }}, {{ data['town'] }}, {{ data['postcode'] }}</td>
+        </tr>
+        <tr>
+            <td>Payment for:</td>
+            <td id="payment-description" class="details">Apply for UK background checks for {{ data['service'] }}</td>
+        </tr>
+        <tr>
+            <td>Total amount:</td>
+            <td id="amount" class="details">£42.00</td>
+        </tr>
+        <tr>
+            <td>Confirmation email:</td>
+            <td id="email" class="details">{{ data['email-check'] }}</td>
+        </tr>
+    </table>
+  </div>
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+    <a href="#">Cancel payment</a>
+
+
+  </div>
+
+</div>
+
+  </main>
+
+{% endblock %}

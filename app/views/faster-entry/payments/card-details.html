@@ -5,31 +5,117 @@
 {% endblock %}
 
 {% block content %}
-<main id="content" role="main">
+<main id="content" role="main" class="content-wrapper">
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <form action="email-check" method="post" class="form payment">
-      <h1 class="heading-large">Enter card details</h1>
-        <form action="passport-expiry" method="post" class="form">
 
+      <h1 class="heading-large">Enter card details</h1>
+      <form action="card-summary" method="post" class="form payment">
           <div class="form-group">
               <label class="form-label-bold" for="cardnumber">Card number</label>
-              <input type="text" autocomplete="off" class="form-control percent75" id="cardnumber" name="cardnumber" value="">
+              <input type="text" autocomplete="off" class="form-control percent75" id="cardnumber" name="cardnumber">
+              <ul class="accepted-cards field-empty">
+                <li
+                  class="visa"
+                  data-key="visa"
+                  data-credit="true"
+                  data-debit="true"
+                  alt="visa"
+                >
+                  <span class="visuallyhidden">
+
+                  </span>
+                </li>
+                <li
+                  class="master-card"
+                  data-key="master-card"
+                  data-credit="true"
+                  data-debit="true"
+                  alt="master-card"
+                >
+                  <span class="visuallyhidden">
+
+                  </span>
+                </li>
+                <li
+                  class="american-express"
+                  data-key="american-express"
+                  data-credit="true"
+                  data-debit="false"
+                  alt="american-express"
+                >
+                  <span class="visuallyhidden">
+
+                  </span>
+                </li>
+                <li
+                  class="diners-club"
+                  data-key="diners-club"
+                  data-credit="true"
+                  data-debit="false"
+                  alt="diners-club"
+                >
+                  <span class="visuallyhidden">
+
+                  </span>
+                </li>
+                <li
+                  class="discover"
+                  data-key="discover"
+                  data-credit="true"
+                  data-debit="false"
+                  alt="discover"
+                >
+                  <span class="visuallyhidden">
+
+                  </span>
+                </li>
+                <li
+                  class="jcb"
+                  data-key="jcb"
+                  data-credit="true"
+                  data-debit="false"
+                  alt="jcb"
+                >
+                  <span class="visuallyhidden">
+
+                  </span>
+                </li>
+                <li
+                  class="unionpay"
+                  data-key="unionpay"
+                  data-credit="true"
+                  data-debit="false"
+                  alt="unionpay"
+                >
+                  <span class="visuallyhidden">
+
+                  </span>
+                </li>
+              </ul>
+              <p class="withdrawal-text">
+                accepted credit and debit card types
+              </p>
           </div>
 
           <div class="form-group">
             <fieldset>
               <div class="form-date">
-                <label class="form-label-bold" for="cardnumber">Expiry date</label>
+                <label class="form-label-bold">Expiry date</label>
                 <p>For example, 07/17</p>
                 <div class="form-group form-group-year">
                   <label for="paymonth">Month</label>
-                  <input class="form-control" id="paymonth" type="number" pattern="[0-9]*" min="0" max="12" name="paymonth" value="">
+                  <input class="form-control" id="paymonth" type="number" pattern="[0-9]*" min="0" max="12" name="paymonth">
                 </div>
+
+                <div class="form-group form-group-seperator">
+                  <p>/</p>
+                </div>
+
                 <div class="form-group form-group-year">
-                  <label for="paymonth">Year</label>
-                  <input class="form-control" id="paymonth" type="number" pattern="[0-9]*" min="0" max="2054" name="paymonth" value="">
+                  <label for="payyear">Year</label>
+                  <input class="form-control" id="payyear" type="number" pattern="[0-9]*" min="0" max="2054" name="payyear">
                 </div>
               </div>
             </fieldset>
@@ -37,31 +123,21 @@
 
           <div class="form-group">
               <label class="form-label-bold" for="cardname">Name on card</label>
-              <input type="text" autocomplete="off" class="form-control percent75" id="cardname" name="cardname" value="">
+              <input type="text" autocomplete="off" class="form-control percent75" id="cardname" name="cardname">
           </div>
 
           <div class="form-group">
-              <label class="form-label-bold" for="cardname">Card security code</label>
+              <label class="form-label-bold" for="cardsecuritynumber">Card security code</label>
               <p class="paymentp">The last 3 digits on the back of the card</p>
-              <input type="text" autocomplete="off" class="form-control" id="cardname" name="cardname" value="">
+              <input type="text" autocomplete="off" class="form-control cvc" id="cardsecuritynumber" name="cardsecuritynumber" type="tel">
+              <img src="/public/images/security-code.png" class="generic-cvc" alt="Please enter either a 3 or 4 digit card security code">
           </div>
-
-          <h2 class="heading-medium">Billing address</h2>
+          <div class="form-group">
+          <h2 class="heading-medium payment-sub">Billing address</h2>
           <p>This is the address associated with the card</p>
 
-          <div class="form-group">
-            <label id="address-country-lbl" for="address-country" class="form-label-bold">
-                <span
-                        class="address-country-label push-top-sml"
-                        data-label-replace="addressCountry"
-                        data-original-label="Country">
-                  Country
-                </span>
-
-
-                <span class="ui-front form-label-bold">
-                    <!--<label for="#address-country" class="form-label">Country of birth</label>-->
-                    <select name="addressCountry" class="form-control percent75" id="address-country" autocomplete="off">
+            <label id="address-country-lbl" for="address-country" class="form-label-bold">Country</label>
+              <select name="addressCountry" class="form-control percent75" id="address-country" autocomplete="off">
 
                         <option
                                 value="GB"
@@ -1430,13 +1506,12 @@
 
                     </select>
                 </span>
-            </label>
           </div>
 
           <div class="form-group">
               <label class="form-label-bold" for="building">Building number or name and street</label>
-              <input type="text" autocomplete="off" class="form-control percent75" id="building" name="building" value="">
-              <input type="text" autocomplete="off" class="form-control percent75 gaptop" id="building2" name="building2" value="">
+              <input type="text" autocomplete="off" class="form-control percent75" id="building" name="building">
+              <input type="text" autocomplete="off" class="form-control percent75 gaptop" id="building2" name="building2">
           </div>
 
           <div class="form-group">
@@ -1446,30 +1521,26 @@
 
           <div class="form-group">
               <label class="form-label-bold" for="postcode">Postcode</label>
-              <input type="text" autocomplete="off" class="form-control" id="postcode" name="postcode" value="">
+              <input type="text" autocomplete="off" class="form-control percent25" maxlength="10" id="postcode" name="postcode">
           </div>
 
           <div class="form-group">
               <label class="form-label-bold" for="email">Email</label>
               <p class="paymentp">We'll send your payment confirmation here</p>
-              <input type="text" autocomplete="off" class="form-control percent75" id="email" name="email" value="">
+              <input type="text" autocomplete="off" class="form-control percent75" id="email" name="email-check" value="{{ data['email-check'] }}">
           </div>
 
           <div class="form-group">
             <input type="submit" class="button" value="Continue">
           </div>
           <a href="#">Cancel payment</a>
-
-
-
     </form>
   </div>
-  <div class="stickyContainer">
   <aside class="payment-summary">
       <div class="inner js-stick-at-top-when-scrolling">
           <h2>Payment summary</h2>
           <p>
-              <span id="payment-description">Register to Apply for US Global Entry application</span>
+              <span id="payment-description">Apply for UK background checks for {{ data['service'] }}</span>
           </p>
           <p>
               Total amount:
@@ -1478,7 +1549,7 @@
       </div>
   </aside>
 </div>
-  </div>
+
   </main>
 
 {% endblock %}

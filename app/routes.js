@@ -72,5 +72,13 @@ router.get('/checkbox', function (req, res) {
      }
   })
 
-
+  router.get('/passport-nationality_v2', function (req, res) {
+    //var passportnationality = req.query.passportnationality
+    var nationality = req.session.data['british-citizen']
+  if (nationality == 'No') {
+     res.redirect('/faster-entry/apply/ineligible')
+   } else {
+     res.render('faster-entry/apply/convictions')
+     }
+  })
 module.exports = router
