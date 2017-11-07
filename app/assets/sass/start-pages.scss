@@ -15,4 +15,6 @@ nav.pagination ul {padding-left: 0}
     background-position: 100% 50%;
     padding: 0.36842em 2.15789em 0.21053em 0.84211em;}
 
-    
+  #content a, .pagination li a .pagination-label, a:visited, #content.multi-page li a:visited, #content.multi-page .pagination li a:visited, #wrapper.programme .article-container nav a:visited {color: #005EA5}
+
+  #content a.button:link, #content a.button:hover, #content a.button:focus, #content a.button:visited {color: #fff}
