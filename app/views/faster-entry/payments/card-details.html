@@ -11,7 +11,7 @@
   <div class="column-two-thirds">
 
       <h1 class="heading-large">Enter card details</h1>
-      <form action="card-summary" method="post" class="form payment">
+      <form action="/faster-entry/payments/card-summary" method="post" class="form payment">
           <div class="form-group">
               <label class="form-label-bold" for="cardnumber">Card number</label>
               <input type="text" autocomplete="off" class="form-control percent75" id="cardnumber" name="cardnumber">
@@ -1533,14 +1533,15 @@
           <div class="form-group">
             <input type="submit" class="button" value="Continue">
           </div>
-          <a href="#">Cancel payment</a>
+          <a href="/faster-entry/start-pages_v3/start1">Cancel payment</a>
+
     </form>
   </div>
   <aside class="payment-summary">
       <div class="inner js-stick-at-top-when-scrolling">
           <h2>Payment summary</h2>
           <p>
-              <span id="payment-description">Apply for UK background checks for {{ data['service'] }}</span>
+              <span id="payment-description">Apply for UK background checks</span>
           </p>
           <p>
               Total amount:

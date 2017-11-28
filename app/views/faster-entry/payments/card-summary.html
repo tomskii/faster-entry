@@ -18,10 +18,10 @@
             <td>Card number:</td>
             <td id="card-number" class="details">{{ data['cardnumber'] }}</td>
         </tr>
-        <tr>
+        <!--<tr>
             <td>Card brand:</td>
             <td id="card-brand" class="details">{{ data['brand'] }}</td>
-        </tr>
+        </tr>-->
         <tr>
             <td>Expiry date:</td>
             <td id="expiry-date" class="details">{{ data['paymonth'] }}/{{ data['payyear'] }}</td>
@@ -36,7 +36,7 @@
         </tr>
         <tr>
             <td>Payment for:</td>
-            <td id="payment-description" class="details">Apply for UK background checks for {{ data['service'] }}</td>
+            <td id="payment-description" class="details">Apply for UK background checks</td>
         </tr>
         <tr>
             <td>Total amount:</td>
@@ -49,9 +49,9 @@
     </table>
   </div>
     <div class="form-group">
-      <input type="submit" class="button" value="Continue">
+ <a class="button" href="/faster-entry/apply/confirmation">Continue</a>
     </div>
-    <a href="#">Cancel payment</a>
+    <a href="/faster-entry/start-pages_v3/start1">Cancel payment</a>
 
 
   </div>
