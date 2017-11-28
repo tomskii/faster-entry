@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for faster entry to the USA and Canada
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold-large">Application submitted</h1>
+        <p>
+          Your application reference is <br>
+          <strong class="heading-medium">JV5E2JNJ</strong>
+        </p>
+      </div>
+      <p>We have received your payment of £42 and sent a confirmation email to <a href="mailto:">{{ data['email-check'] }}</a>.</p>
+    		<p>Please add <a href="mailto:">inbox@homeoffice.gsi.gov.uk</a> to your contacts or safe senders list. Otherwise, our emails may go into your junk or spam folder.</p>
+
+    	<h2 class="bold-small">What happens next?</h2>
+
+      <p>We’ll email you within 10 working days to say if you’ve passed the UK background check.</p>
+      <p>You’ll get a UK access code if you pass, along with details of how to apply for Nexus.</p>
+      <p>Application and enrolment will be managed completely by the Canadian and US authorities.</p>
+      <p>Additional background checks are required. These cost $50 USD. This is not refunded if your application is refused.</p>
+      <p>Once conditionally approved, you’ll need to book a face-to-face interview at an enrolment centre within 6 months. This is the final step to confirm your membership, which lasts 5 years.</p>
+
+      <p><a href="http://gov.uk" class="button">Finish</a></p>
+      <div class="form-group">
+      <p><a href="#">What do you think of this service?</a></p>
+    </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

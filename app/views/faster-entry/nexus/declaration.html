@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+      <h1 class="heading-large">
+          Declaration [Update with Nexus copy]
+        </h1>
+      <h2 class="heading-medium">I confirm that:</h2>
+      <ul class="list-bullet">
+        <li>I have read, understood and accept the <a href="/terms-and-conditions" target="_blank">terms and conditions</a> of the Register to Apply for US Global Entry service, including those about how personal information is used and stored</li>
+        <li>The information I have supplied is complete and true to the best of my knowledge</li>
+        <li>If I am registering for someone else I have their full consent, or have <a href="https://www.gov.uk/parental-rights-responsibilities" target="_blank" rel="external">'parental responsibility'<span class="visuallyhidden">Opens in new window</span></a> for them if they are under 18</li>
+      </ul>
+      <h2 class="heading-medium">I understand that:</h2>
+      <ul class="list-bullet">
+        <h3 class="tc-bullet-heading">Regarding this service</h3>
+        <li>This is an initial registration required by the US authorities before I can apply for membership of the US Global Entry Program</li>
+        <li>There is a £42 non refundable fee to register to apply for the US Global Entry Program</li>
+        <h3 class="tc-bullet-heading">Regarding Global Entry</h3>
+        <li>My application to Global Entry will be through a separate application to the US authorities, with an additional fee of $100 USD</li>
+        <li>To get Global Entry membership I must meet the US <a href="http://www.cbp.gov/travel/trusted-traveler-programs/global-entry/eligibility" target="_blank" rel="external"> eligibility requirements<span class="visuallyhidden">Opens in new window</span></a>. My future entry to the US might be affected if the US authorities reject my application</li>
+        <li>The US authorities can end your Global Entry membership if you break its terms and conditions</li>
+      </ul>
+    <div class="form-group"></div>
+        <div id="declaration-group" class="form-group">
+          <div class="multiple-choice">
+            <input id="declaration" type="checkbox" name="declaration" value="true">
+            <label for="declaration">I understand and agree with the above declarations</label>
+          </div>
+        </div>
+        <a class="button" href="card-details" id="continuebutton">Confirm</a>
+
+      </div>
+
+</div>
+
+</main>
+
+
+
+{% endblock %}

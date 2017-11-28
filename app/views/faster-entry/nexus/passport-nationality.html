@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for faster entry to the USA and Canada
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+  <form action="/passport-nationality_nexus" method="get" class="form">
+
+    <h1 class="heading-medium">Are you a British citizen?</h2>
+      <p>You can only register if it says ‘British citizen’ in the nationality section of your passport.</p>
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="visually-hidden">Are you a British citizen?</legend>
+
+            <div class="multiple-choice">
+              <input id="yes" type="radio" name="british-citizen" value="British" {{ checked('british-citizen','British citizen') }}>
+              <label for="yes">Yes</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="no" type="radio" name="british-citizen" value="No" {{ checked('british-citizen','No') }}>
+              <label for="no">No</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+    <div class="form-group">
+      <details>
+        <summary><span class="summary">Not sure if your type of British nationality is eligible?</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>You can't register if you're a:</p>
+          <ul class="list-bullet">
+            <li>British overseas territories citizen</li>
+            <li>British overseas citizen</li>
+            <li>British subject</li>
+            <li>British national (overseas)</li>
+            <li>British protected person</li>
+          </ul>
+          <p><a href="https://www.gov.uk/types-of-british-nationality/overview" target="_blank" rel="external"><span class="visuallyhidden">Opens in new window</span>Read more on the types of British nationality</a></p>
+        </div>
+      </details>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+</div>
+</div>
+</main>
+{% endblock %}

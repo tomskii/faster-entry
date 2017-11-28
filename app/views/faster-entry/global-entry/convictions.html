@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for faster entry to the USA and Canada
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+  <form action="/convictions_ge" method="get" class="form">
+
+    <h1 class="heading-medium">Do you have a criminal record in any country (including police cautions and spent convictions)?</h2>
+      <p>You don’t need to tell us about motoring fines or penalty points unless these were court imposed.</p>
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="visually-hidden">Are you a British citizen?</legend>
+
+            <div class="multiple-choice">
+              <input id="yes" type="radio" name="convictions" value="Yes" {{ checked('convictions','Yes') }}>
+              <label for="yes">Yes</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="no" type="radio" name="convictions" value="No" {{ checked('convictions','No') }}>
+              <label for="no">No</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+</div>
+</div>
+</main>
+{% endblock %}

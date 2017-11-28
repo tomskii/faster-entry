@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for faster entry to the USA and Canada
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+  <form action="passport-othername" method="post" class="form">
+
+    <h1 class="heading-medium">
+        What is your full name as written in your passport?
+      </h1>
+        <div class="form-group">
+            <label class="form-label-bold" for="givennames">First and middle names</label>
+            <input type="text" autocomplete="off" class="form-control" id="givennames" name="givennames" value="{{givennames}}">
+        </div>
+        <div class="form-group">
+            <label class="form-label-bold" for="surname">Last or family name</label>
+            <input type="text" autocomplete="off" class="form-control" id="surname" name="surname" value="{{surname}}">
+        </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+</div>
+</div>
+</main>
+{% endblock %}
